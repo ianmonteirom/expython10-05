@@ -21,7 +21,7 @@ for i in range(len(matriz)):
         print(matriz[i][j], end='\t')
     print()
 
-print('--' * 32)
+print('--' * len(matriz) * 2)
 
 novaMatriz = []
 
