@@ -6,40 +6,32 @@ colunas da matriz)
 
 from random import randint
 
-matriz, linhas, colunas = [], [], []
+matriz = []
 
 for i in range(4):
     linha = []
     for j in range(4):
         # n = int(input(f'Número da posição [{i}, {j}]: '))
-        n = randint(1, 20)
+        n = randint(10, 99)
         linha.append(n)
     matriz.append(linha)
 
 for i in range(len(matriz)):
     for j in range(len(matriz[0])):
         print(matriz[i][j], end='\t')
-        if j == 0:
-            colunas.append(matriz[i][j])
     print()
-
-
-for i in range(len(matriz)):
-    linha = []
-    for j in range(len(matriz[0])):
-        if j > 0:
-            linha.append(matriz[i][j])
-    linhas.append(linha)
 
 print('--' * 32)
 
-'''
-for i in range(len(matriz)):
-    for j in range(len(linhas[0])):
-        print(colunas[i], end='\t')
-        print(linhas[i][j], end='\t')
-    print()
-'''
+novaMatriz = []
 
-print(colunas)
-print(linhas)
+for i in range(4):
+    coluna = []
+    for j in range(4):
+        coluna.append(matriz[j][i])
+    novaMatriz.append(coluna)
+
+for i in range(len(novaMatriz)):
+    for j in range(len(novaMatriz[0])):
+        print(novaMatriz[i][j], end='\t')
+    print()
